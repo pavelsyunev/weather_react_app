@@ -1,4 +1,20 @@
-# Getting Started with Create React App
+# Simple weather react app based on free Open Weather API. 
+
+App automatically detect user location with free https://geolocation-db.com/ service. If user use any add block or geolocation service can't detect user location, default location will be New York.
+
+## Graphic design
+
+Application graphic design follow Success Academies websites main design patterns. I used square containers to split and show main information. Orange is main color for current weather, Gray color is used for additional information like forecast data.
+
+## Application design
+
+Application has simple structure based on four main components and two utils functions. Each component responsible for own data. On the first start App component fetching user location information. If geolocation is not available, function pass default location - New York. Next we get weather data  with Open weather API for current day and forecast data, save it to App component state. App component pass weather data as props to Current weather component and to Forecast weather component. Based on this information react render components.
+
+## Testing
+
+Because application is pretty simple and straightforward I didn't use any special test. We just need to be sure that we fetch correct information and pass it as props to child components. While fetching user see Loading message. After fetching is done we show main component with weather data.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
